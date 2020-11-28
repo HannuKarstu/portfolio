@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hannun musasoitin</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="player.js"></script>
+  </head>
+
+
+
+
+  
+  <body>
+
+    <div class="card card-image" style="background-image: url(./kuva.jpg);">
+        <div class="text-black text-center rgba-stylish-strong py-5 px-4">
+        
+            <div class="container-fluid">
+                <h5 class="text-black"> Hannun musasoitin</h5>
+                <br><br>
+
+                <div class="row">
+                                      
+                    <div class="col-md-4">
+                        <br>        
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <!-- DEFINE AUDIO -->
+                        <div id="player">
+                            <audio id="audio"></audio>
+                        </div>
+
+                        <!-- PLAYLIST -->
+                        <div id="lista">
+                            <label for="selectLista">Playlist</label>
+                            <select class="form-control" id="selectlista" size="3"></select>
+                        </div>  
+                        <br>
+
+                        <!-- Duration slider -->
+                        <div class="slidecontainer">
+                            <input type="range" min="0" max="100" value="0" class="custom-range" id="Duration">
+                        </div>
+                        <!-- Duration Display -->
+                            <p>Time: <span id="Duration_is"></span>/<span id="Remaining_is"></p>
+        
+                        <!-- Song Display -->
+                            <p>Song: <span id="Song_is"></span></p>
+                            <p>Song duration: </span><span id="Length_is"></span></p>
+
+
+
+                        <!-- PLAY, PAUSE AND STOP -->
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="Play" id="btnPlay" autocomplete="off"> Play
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="Pause" id="btnPause" autocomplete="off"> Pause
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="Stop" id="btnStop" autocomplete="off"> Stop
+                            </label>   
+                        </div>
+                            <br><br>
+
+                        <!-- NEXT AND PREV -->
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="Prev" id="btnPrev" autocomplete="off"> Prev
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="Next" id="btnNext" autocomplete="off"> Next
+                            </label>
+                        </div>
+                            <br><br>
+
+                       
+        
+                        <!-- Volume slider -->
+                        <input type="range" min="1" max="100" value="50" class="custom-range" id="Volume">
+                                                                            
+                        <!-- Volume display -->
+                        <p>Volume: <span id="Volume_is"></span> %</p>
+        
+        
+
+                        
+        
+                    </div>
+
+                    <div class="col-md-4">  
+                        <br>       
+                    </div>
+                    
+        
+                </div>
+            </div>
+    
+        
+        </div>
+    </div>
+    <!-- Jumbotron -->
+
+
+
+
+
+
+
+
+
+ 
+
+
+    <script>
+        // window.onload-tapahtumaa kutsutaan kun selain on ladannut HTML-sivun
+        window.onload = function() {
+            // Luo mediaplayer-olio
+            player = new Mediaplayer();
+        };
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+

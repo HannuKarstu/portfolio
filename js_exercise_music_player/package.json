@@ -1,0 +1,15 @@
+{
+  "name": "teht4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "player.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon player.js"
+  },
+  "author": "Hannu Karstu",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
