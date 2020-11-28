@@ -1,0 +1,32 @@
+### Onnistunut POST / sama nimi
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Thkhhkhkjhk",
+    "number": "03123"
+}
+
+
+### Nimi puuttuu error
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "number": "0500123123"
+}
+
+### Numero puuttuu error
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Terttu Testaaja"
+}
+
+### Molemmat puuttuu
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{   
+}

@@ -1,0 +1,63 @@
+# Mitä tapahtuu tilanteessa, missä käyttäjä luo uuden muistiinpanon 
+#  ollessaan sivulla https://fullstack-exampleapp.herokuapp.com/notes, 
+#  eli kirjoittaa tekstikenttään jotain ja painaa nappia tallenna.
+
+# Kirjoita tarvittaessa palvelimella tai selaimessa tapahtuvat 
+#  operaatiot sopivina kommentteina kaavion sekaan.
+
+# Lomake lähetetään
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+
+# Palvelin käsittelee lomakkeen lähettämän tekstin
+note over palvelin:
+POST-pyyntöön liitetty data menee pyynnön mukana bodynä.
+Palvelin pyytää datan pyyntöä vastaavan olion body-kentästä
+Palvelin luo olion joka sisältää lomakkeen tekstin ja aikaleiman
+Palvelin lisää olion taulukkoon nimeltä "notes".
+Palvelin tallentaa taulukon data.json -tiedostoon
+end note
+
+# Palvelin lähettää uudelleenohjauspyynnön
+palvelin-->selain: Statuskoodi 302, uudelleenohjauspyyntö headerin Location kohteeseen
+
+# Selain hakee sivun uudestaan
+note over selain:
+Selain pyytää sivun uudestaan.
+end note
+
+# Selain lähettää HTTP GET -pyynnön
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+palvelin-->selain: HTML-koodi
+
+# Selain pyytää main.js:n uudestaan
+note over selain:
+Selain pyytää main.js -javascript-tiedoston.
+end note
+
+# Haetaan uudestaan main.js
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+palvelin-->selain: main.js
+
+# Selain pyytää main.css:n uudestaan
+note over selain:
+Selain pyytää main.css -asettelutiedoston uudestaan.
+end note
+
+# Haetaan uudestaan main.css
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin-->selain: main.css
+
+# Selain suorittaa js-koodit
+note over selain:
+Selain suorittaa javascript-koodia
+Selain pyytää data.jsonin palvelimelta
+end note
+
+# Haetaan uudestaan data.json
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+palvelin-->selain: [{ content: "Muistiinpano", date: "2020-08-03" }, ...]
+
+note over selain:
+Selain suorittaa tapahtumakäsittelijän
+Selain piirtää data.jsonin sisältämät muistiinpanot ruudulle.
+end note

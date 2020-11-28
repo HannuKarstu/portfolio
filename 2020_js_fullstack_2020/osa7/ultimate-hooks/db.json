@@ -1,0 +1,42 @@
+{
+  "notes": [
+    {
+      "content": "custom-hookit aivan mahtavia",
+      "id": 1
+    },
+    {
+      "content": "paras feature ikinä <3",
+      "id": 2
+    },
+    {
+      "content": "helppoahan tää kun osaa",
+      "id": 3
+    },
+    {
+      "content": "...vai onko",
+      "id": 4
+    }
+  ],
+  "persons": [
+    {
+      "name": "mluukkai",
+      "number": "040-5483923",
+      "id": 1
+    },
+    {
+      "name": "testi",
+      "number": "123",
+      "id": 2
+    },
+    {
+      "name": "testaaja",
+      "number": "123123",
+      "id": 3
+    },
+    {
+      "name": "keijo",
+      "number": "321",
+      "id": 4
+    }
+  ]
+}

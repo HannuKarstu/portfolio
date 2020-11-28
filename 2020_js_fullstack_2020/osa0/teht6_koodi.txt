@@ -1,0 +1,31 @@
+# Tee kaavio tilanteesta, missä käyttäjä luo uuden 
+#  muistiinpanon single page -versiossa.
+
+# Lomake lähetetään
+note over selain:
+Spa.js -tiedostossa määritelty koodi hoitaa lomakkeen lähettämisen.
+Lomakkeen lähettämisen jälkeen ei ladata sivua uudestaan.
+Luodaan muistiinpano ja lisätään se muistiinpanojen listalle.
+Piirretään muistiinpanolista uudestaan
+Lähetetään uusi muistiinpano palvelimelle.
+end note
+
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+# Palvelin käsittelee lomakkeen lähettämän tekstin
+note over palvelin:
+POST-pyynnön mukana menee JSON-muodossa muistiinpano ja aikaleima
+Palvelin luo olion joka sisältää muistiinpanon ja aikaleiman
+Palvelin lisää olion taulukkoon nimeltä "notes".
+Palvelin tallentaa taulukon data.json -tiedostoon
+end note
+
+# Palvelin lähettää vastauksen
+palvelin-->selain: Statuskoodi 201 Created
+
+# Palvelin käsittelee lomakkeen lähettämän tekstin
+note over palvelin:
+Tällaisessa ratkaisussa on se ongelma, etteivät toisten käyttäjien
+lähettämät muistiinpanot näy listalla ennen kuin sivu ladataan
+uudestaan.
+end note

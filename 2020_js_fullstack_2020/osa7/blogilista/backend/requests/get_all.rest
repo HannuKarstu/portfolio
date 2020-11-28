@@ -1,0 +1,6 @@
+### GET hae kaikki
+GET http://localhost:3003/api/blogs
+
+
+### GET hae kaikki
+GET http://localhost:3003/api/users

@@ -1,0 +1,22 @@
+[
+        {
+            "name": "Heikki Happonen",
+            "number": "0501234567",
+            "id": 1
+        },
+        {
+            "name": "Tom Cruise",
+            "number": "0400123456",
+            "id": 2
+        },
+        {
+            "name": "Hullu Huttunen",
+            "number": "0800123456",
+            "id": 3
+        },
+        {
+            "name": "Terttu Testaaja",
+            "number": "0800123777",
+            "id": 4
+        }
+    ]

@@ -1,0 +1,33 @@
+### USER
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "hakkeri",
+    "name": "Heikki Hakkeri",
+    "password": "password"
+}
+
+### BLOGI
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imhha2tlcmkiLCJpZCI6IjVmMDcwYjIzZmM2NGJlMmQxMGI0ZDNiMSIsImlhdCI6MTU5NDI5NzE1MH0.ZbvQQR-Bwg8sErnjU_S4XNW7tT2v7SSvC1-fTY2ZoBo
+
+
+{
+    "title" : "Heikin blogiii",
+    "author": "Heikin isä",
+    "url": "www.heikkiiiii.fi",
+    "likes": 2
+}
+
+###BLOGI
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+
+{
+    "title" : "BBBBBB",
+    "author": "fdasdasdfs",
+    "url": "fsdfsdfsd",
+    "likes": 55
+}

@@ -1,0 +1,42 @@
+# Tee kaavio tilanteesta, missä käyttäjä menee selaimella 
+#  osoitteeseen https://fullstack-exampleapp.herokuapp.com/spa 
+#  eli muistiinpanojen Single Page App-versioon
+
+
+# Selain pyytää HTML-tiedoston
+note over selain:
+Selain pyytää sivun.
+end note
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+palvelin-->selain: HTML-koodi
+
+
+# Selain pyytää spa.js:n
+note over selain:
+Selain pyytää spa.js -javascript-tiedoston.
+end note
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+palvelin-->selain: spa.js
+
+
+# Selain pyytää main.css:n
+note over selain:
+Selain pyytää main.css -asettelutiedoston.
+end note
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin-->selain: main.css
+
+
+# Selain suorittaa js-koodit ja pyytää data.jsonin
+note over selain:
+Selain suorittaa javascript-koodia
+Selain pyytää data.jsonin palvelimelta
+end note
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa/data.json
+palvelin-->selain: [{ content: "Muistiinpano", date: "2020-08-03" }, ...]
+
+
+note over selain:
+Selain suorittaa tapahtumakäsittelijän
+Selain piirtää data.jsonin sisältämät muistiinpanot ruudulle.
+end note
